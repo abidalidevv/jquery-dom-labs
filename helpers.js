@@ -88,3 +88,7 @@ function getElement(sel) { return document.querySelector(sel); }
 // add local storage helper
 // add debounce utility
 // add local storage helper
+
+
+const formatCurrency = (amount, currency = 'USD', locale = 'en-US') =>
+  new Intl.NumberFormat(locale, { style: 'currency', currency }).format(amount);
