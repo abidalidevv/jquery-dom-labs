@@ -90,3 +90,7 @@ $(document).ready(function() {
 // add debounce utility
 // optimize loop logic
 // add input validation
+
+
+const parseQueryString = (search = window.location.search) =>
+  Object.fromEntries(new URLSearchParams(search));
