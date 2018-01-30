@@ -94,3 +94,7 @@ $(document).ready(function() {
 
 const parseQueryString = (search = window.location.search) =>
   Object.fromEntries(new URLSearchParams(search));
+
+
+const toKebabCase = (str) =>
+  str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
