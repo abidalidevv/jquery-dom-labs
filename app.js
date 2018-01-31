@@ -98,3 +98,17 @@ const parseQueryString = (search = window.location.search) =>
 
 const toKebabCase = (str) =>
   str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
+
+
+const copyToClipboard = async (text) => {
+  if (navigator.clipboard) {
+    await navigator.clipboard.writeText(text);
+  } else {
+    const el = document.createElement('textarea');
+    el.value = text;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+  }
+};
