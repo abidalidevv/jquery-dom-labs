@@ -143,3 +143,6 @@ const debounce = (fn, delay) => {
     timer = setTimeout(() => fn(...args), delay);
   };
 };
+
+
+const flatten = (arr, depth = 1) => arr.flat(depth);
