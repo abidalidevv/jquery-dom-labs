@@ -146,3 +146,6 @@ const debounce = (fn, delay) => {
 
 
 const flatten = (arr, depth = 1) => arr.flat(depth);
+
+
+const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
