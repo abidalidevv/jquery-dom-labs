@@ -123,3 +123,7 @@ const range = (start, end, step = 1) => {
   for (let i = start; i < end; i += step) result.push(i);
   return result;
 };
+
+
+const formatCurrency = (amount, currency = 'USD', locale = 'en-US') =>
+  new Intl.NumberFormat(locale, { style: 'currency', currency }).format(amount);
