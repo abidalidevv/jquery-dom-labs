@@ -162,3 +162,11 @@ const debounce = (fn, delay) => {
 
 const formatCurrency = (amount, currency = 'USD', locale = 'en-US') =>
   new Intl.NumberFormat(locale, { style: 'currency', currency }).format(amount);
+
+
+const groupBy = (arr, key) =>
+  arr.reduce((acc, item) => {
+    const k = typeof key === 'function' ? key(item) : item[key];
+    (acc[k] = acc[k] || []).push(item);
+    return acc;
+  }, {});
