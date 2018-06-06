@@ -178,3 +178,7 @@ const scrollToTop = (smooth = true) =>
 
 const omit = (obj, keys) =>
   Object.fromEntries(Object.entries(obj).filter(([k]) => !keys.includes(k)));
+
+
+const toCamelCase = (str) =>
+  str.replace(/[-_](.)/g, (_, c) => c.toUpperCase());
