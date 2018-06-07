@@ -186,3 +186,6 @@ const toCamelCase = (str) =>
 
 const getNestedValue = (obj, path, fallback = undefined) =>
   path.split('.').reduce((acc, key) => acc?.[key], obj) ?? fallback;
+
+
+const compose = (...fns) => (value) => fns.reduceRight((v, fn) => fn(v), value);
