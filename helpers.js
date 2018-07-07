@@ -209,3 +209,7 @@ class EventEmitter {
     return this;
   }
 }
+
+
+const parseQueryString = (search = window.location.search) =>
+  Object.fromEntries(new URLSearchParams(search));
