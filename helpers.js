@@ -220,3 +220,7 @@ const pick = (obj, keys) =>
 
 
 const unique = (arr) => [...new Set(arr)];
+
+
+const queryParams = (params) =>
+  '?' + new URLSearchParams(params).toString();
