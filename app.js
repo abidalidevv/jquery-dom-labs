@@ -180,3 +180,7 @@ const range = (start, end, step = 1) => {
   for (let i = start; i < end; i += step) result.push(i);
   return result;
 };
+
+
+const getNestedValue = (obj, path, fallback = undefined) =>
+  path.split('.').reduce((acc, key) => acc?.[key], obj) ?? fallback;
