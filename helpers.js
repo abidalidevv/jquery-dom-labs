@@ -224,3 +224,6 @@ const unique = (arr) => [...new Set(arr)];
 
 const queryParams = (params) =>
   '?' + new URLSearchParams(params).toString();
+
+
+const pipe = (...fns) => (value) => fns.reduce((v, fn) => fn(v), value);
