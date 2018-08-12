@@ -184,3 +184,6 @@ const range = (start, end, step = 1) => {
 
 const getNestedValue = (obj, path, fallback = undefined) =>
   path.split('.').reduce((acc, key) => acc?.[key], obj) ?? fallback;
+
+
+const flatten = (arr, depth = 1) => arr.flat(depth);
