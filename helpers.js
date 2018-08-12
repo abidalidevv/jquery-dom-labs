@@ -239,3 +239,6 @@ const groupBy = (arr, key) =>
 
 const generateId = (length = 8) =>
   Math.random().toString(36).substring(2, 2 + length);
+
+
+const flatten = (arr, depth = 1) => arr.flat(depth);
