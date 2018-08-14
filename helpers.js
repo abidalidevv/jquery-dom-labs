@@ -246,3 +246,6 @@ const flatten = (arr, depth = 1) => arr.flat(depth);
 
 const isValidEmail = (email) =>
   /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+
+const compose = (...fns) => (value) => fns.reduceRight((v, fn) => fn(v), value);
