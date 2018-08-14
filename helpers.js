@@ -242,3 +242,7 @@ const generateId = (length = 8) =>
 
 
 const flatten = (arr, depth = 1) => arr.flat(depth);
+
+
+const isValidEmail = (email) =>
+  /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
