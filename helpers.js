@@ -249,3 +249,6 @@ const isValidEmail = (email) =>
 
 
 const compose = (...fns) => (value) => fns.reduceRight((v, fn) => fn(v), value);
+
+
+const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
