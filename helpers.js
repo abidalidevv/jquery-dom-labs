@@ -289,3 +289,6 @@ const setNestedValue = (obj, path, value) => {
   target[last] = value;
   return obj;
 };
+
+
+const unique = (arr) => [...new Set(arr)];
