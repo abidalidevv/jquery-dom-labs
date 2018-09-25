@@ -292,3 +292,7 @@ const setNestedValue = (obj, path, value) => {
 
 
 const unique = (arr) => [...new Set(arr)];
+
+
+const toKebabCase = (str) =>
+  str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
