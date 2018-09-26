@@ -296,3 +296,13 @@ const unique = (arr) => [...new Set(arr)];
 
 const toKebabCase = (str) =>
   str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
+
+
+async function fetchJSON(url, options = {}) {
+  const res = await fetch(url, {
+    headers: { 'Content-Type': 'application/json' },
+    ...options,
+  });
+  if (!res.ok) throw new Error(`HTTP ${res.status}: ${res.statusText}`);
+  return res.json();
+}
