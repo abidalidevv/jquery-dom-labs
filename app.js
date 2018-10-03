@@ -219,3 +219,6 @@ const copyToClipboard = async (text) => {
     document.body.removeChild(el);
   }
 };
+
+
+const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
