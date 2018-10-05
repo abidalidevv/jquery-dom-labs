@@ -234,3 +234,7 @@ const groupBy = (arr, key) =>
 
 const toKebabCase = (str) =>
   str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
+
+
+const scrollToTop = (smooth = true) =>
+  window.scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' });
