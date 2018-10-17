@@ -238,3 +238,6 @@ const toKebabCase = (str) =>
 
 const scrollToTop = (smooth = true) =>
   window.scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' });
+
+
+const flatten = (arr, depth = 1) => arr.flat(depth);
