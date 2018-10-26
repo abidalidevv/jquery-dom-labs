@@ -351,3 +351,7 @@ const debounce = (fn, delay) => {
 
 const parseQueryString = (search = window.location.search) =>
   Object.fromEntries(new URLSearchParams(search));
+
+
+const generateId = (length = 8) =>
+  Math.random().toString(36).substring(2, 2 + length);
