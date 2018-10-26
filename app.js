@@ -245,3 +245,7 @@ const flatten = (arr, depth = 1) => arr.flat(depth);
 
 const toCamelCase = (str) =>
   str.replace(/[-_](.)/g, (_, c) => c.toUpperCase());
+
+
+const generateId = (length = 8) =>
+  Math.random().toString(36).substring(2, 2 + length);
