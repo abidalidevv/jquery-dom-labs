@@ -258,3 +258,7 @@ const chunk = (arr, size) =>
 
 
 const flatten = (arr, depth = 1) => arr.flat(depth);
+
+
+const parseQueryString = (search = window.location.search) =>
+  Object.fromEntries(new URLSearchParams(search));
