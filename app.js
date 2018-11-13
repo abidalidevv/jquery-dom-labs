@@ -262,3 +262,13 @@ const flatten = (arr, depth = 1) => arr.flat(depth);
 
 const parseQueryString = (search = window.location.search) =>
   Object.fromEntries(new URLSearchParams(search));
+
+
+const storage = {
+  get: (key, fallback = null) => {
+    try { return JSON.parse(localStorage.getItem(key)) ?? fallback; }
+    catch { return fallback; }
+  },
+  set: (key, value) => localStorage.setItem(key, JSON.stringify(value)),
+  remove: (key) => localStorage.removeItem(key),
+};
