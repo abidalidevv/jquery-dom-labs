@@ -272,3 +272,6 @@ const storage = {
   set: (key, value) => localStorage.setItem(key, JSON.stringify(value)),
   remove: (key) => localStorage.removeItem(key),
 };
+
+
+const deepClone = (obj) => JSON.parse(JSON.stringify(obj));
