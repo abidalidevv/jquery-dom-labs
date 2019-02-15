@@ -283,3 +283,6 @@ const formatCurrency = (amount, currency = 'USD', locale = 'en-US') =>
 
 const toCamelCase = (str) =>
   str.replace(/[-_](.)/g, (_, c) => c.toUpperCase());
+
+
+const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
