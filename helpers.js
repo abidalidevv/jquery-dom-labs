@@ -447,3 +447,6 @@ const copyToClipboard = async (text) => {
     document.body.removeChild(el);
   }
 };
+
+
+const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
