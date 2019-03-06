@@ -450,3 +450,6 @@ const copyToClipboard = async (text) => {
 
 
 const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
+
+
+const pipe = (...fns) => (value) => fns.reduce((v, fn) => fn(v), value);
