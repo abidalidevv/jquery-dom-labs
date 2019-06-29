@@ -302,3 +302,6 @@ const retry = async (fn, attempts = 3, delay = 500) => {
 
 const pick = (obj, keys) =>
   Object.fromEntries(keys.filter((k) => k in obj).map((k) => [k, obj[k]]));
+
+
+const deepClone = (obj) => JSON.parse(JSON.stringify(obj));
