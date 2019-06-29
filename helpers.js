@@ -483,3 +483,7 @@ const copyToClipboard = async (text) => {
 
 const omit = (obj, keys) =>
   Object.fromEntries(Object.entries(obj).filter(([k]) => !keys.includes(k)));
+
+
+const toKebabCase = (str) =>
+  str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
