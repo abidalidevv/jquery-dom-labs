@@ -309,3 +309,6 @@ const deepClone = (obj) => JSON.parse(JSON.stringify(obj));
 
 const omit = (obj, keys) =>
   Object.fromEntries(Object.entries(obj).filter(([k]) => !keys.includes(k)));
+
+
+const compose = (...fns) => (value) => fns.reduceRight((v, fn) => fn(v), value);
