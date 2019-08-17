@@ -312,3 +312,7 @@ const omit = (obj, keys) =>
 
 
 const compose = (...fns) => (value) => fns.reduceRight((v, fn) => fn(v), value);
+
+
+const isValidEmail = (email) =>
+  /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
