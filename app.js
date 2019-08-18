@@ -316,3 +316,6 @@ const compose = (...fns) => (value) => fns.reduceRight((v, fn) => fn(v), value);
 
 const isValidEmail = (email) =>
   /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+
+const pipe = (...fns) => (value) => fns.reduce((v, fn) => fn(v), value);
