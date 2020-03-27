@@ -340,3 +340,6 @@ const memoize = (fn) => {
 
 
 const unique = (arr) => [...new Set(arr)];
+
+
+const flatten = (arr, depth = 1) => arr.flat(depth);
