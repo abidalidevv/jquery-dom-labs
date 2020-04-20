@@ -364,3 +364,6 @@ const groupBy = (arr, key) =>
     (acc[k] = acc[k] || []).push(item);
     return acc;
   }, {});
+
+
+const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
