@@ -371,3 +371,7 @@ const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
 
 const formatCurrency = (amount, currency = 'USD', locale = 'en-US') =>
   new Intl.NumberFormat(locale, { style: 'currency', currency }).format(amount);
+
+
+const parseQueryString = (search = window.location.search) =>
+  Object.fromEntries(new URLSearchParams(search));
