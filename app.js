@@ -367,3 +367,7 @@ const groupBy = (arr, key) =>
 
 
 const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
+
+
+const formatCurrency = (amount, currency = 'USD', locale = 'en-US') =>
+  new Intl.NumberFormat(locale, { style: 'currency', currency }).format(amount);
