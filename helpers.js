@@ -585,3 +585,15 @@ const debounce = (fn, delay) => {
     timer = setTimeout(() => fn(...args), delay);
   };
 };
+
+
+const throttle = (fn, limit) => {
+  let inThrottle;
+  return (...args) => {
+    if (!inThrottle) {
+      fn(...args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+    }
+  };
+};
