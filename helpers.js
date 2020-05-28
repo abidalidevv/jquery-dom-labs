@@ -597,3 +597,6 @@ const throttle = (fn, limit) => {
     }
   };
 };
+
+
+const deepClone = (obj) => JSON.parse(JSON.stringify(obj));
