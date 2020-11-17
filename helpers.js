@@ -623,3 +623,7 @@ const chunk = (arr, size) =>
 
 
 const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
+
+
+const generateId = (length = 8) =>
+  Math.random().toString(36).substring(2, 2 + length);
