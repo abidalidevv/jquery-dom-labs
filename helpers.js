@@ -635,3 +635,7 @@ const groupBy = (arr, key) =>
     (acc[k] = acc[k] || []).push(item);
     return acc;
   }, {});
+
+
+const generateId = (length = 8) =>
+  Math.random().toString(36).substring(2, 2 + length);
