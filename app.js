@@ -412,3 +412,10 @@ const formatDate = (date, locale = 'en-US', options = {}) =>
     year: 'numeric', month: 'short', day: 'numeric',
     ...options,
   }).format(new Date(date));
+
+
+const range = (start, end, step = 1) => {
+  const result = [];
+  for (let i = start; i < end; i += step) result.push(i);
+  return result;
+};
