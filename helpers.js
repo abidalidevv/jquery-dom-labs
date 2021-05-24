@@ -643,3 +643,7 @@ const generateId = (length = 8) =>
 
 const scrollToTop = (smooth = true) =>
   window.scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' });
+
+
+const scrollToTop = (smooth = true) =>
+  window.scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' });
