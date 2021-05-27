@@ -462,3 +462,10 @@ const retry = async (fn, attempts = 3, delay = 500) => {
 
 
 const flatten = (arr, depth = 1) => arr.flat(depth);
+
+
+const formatDate = (date, locale = 'en-US', options = {}) =>
+  new Intl.DateTimeFormat(locale, {
+    year: 'numeric', month: 'short', day: 'numeric',
+    ...options,
+  }).format(new Date(date));
