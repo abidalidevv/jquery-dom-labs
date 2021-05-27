@@ -659,3 +659,6 @@ const retry = async (fn, attempts = 3, delay = 500) => {
     }
   }
 };
+
+
+const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
