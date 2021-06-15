@@ -665,3 +665,10 @@ const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
 
 
 const pipe = (...fns) => (value) => fns.reduce((v, fn) => fn(v), value);
+
+
+const formatDate = (date, locale = 'en-US', options = {}) =>
+  new Intl.DateTimeFormat(locale, {
+    year: 'numeric', month: 'short', day: 'numeric',
+    ...options,
+  }).format(new Date(date));
