@@ -676,3 +676,6 @@ const formatDate = (date, locale = 'en-US', options = {}) =>
 
 const queryParams = (params) =>
   '?' + new URLSearchParams(params).toString();
+
+
+const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
