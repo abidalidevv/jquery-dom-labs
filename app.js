@@ -514,3 +514,7 @@ class EventEmitter {
 
 const generateId = (length = 8) =>
   Math.random().toString(36).substring(2, 2 + length);
+
+
+const parseQueryString = (search = window.location.search) =>
+  Object.fromEntries(new URLSearchParams(search));
