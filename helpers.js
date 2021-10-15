@@ -695,3 +695,6 @@ const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
 
 
 const unique = (arr) => [...new Set(arr)];
+
+
+const pipe = (...fns) => (value) => fns.reduce((v, fn) => fn(v), value);
