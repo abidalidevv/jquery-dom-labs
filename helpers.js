@@ -698,3 +698,7 @@ const unique = (arr) => [...new Set(arr)];
 
 
 const pipe = (...fns) => (value) => fns.reduce((v, fn) => fn(v), value);
+
+
+const formatCurrency = (amount, currency = 'USD', locale = 'en-US') =>
+  new Intl.NumberFormat(locale, { style: 'currency', currency }).format(amount);
