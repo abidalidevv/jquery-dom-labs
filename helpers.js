@@ -720,3 +720,7 @@ const copyToClipboard = async (text) => {
     document.body.removeChild(el);
   }
 };
+
+
+const isValidEmail = (email) =>
+  /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
