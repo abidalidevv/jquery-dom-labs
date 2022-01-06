@@ -724,3 +724,6 @@ const copyToClipboard = async (text) => {
 
 const isValidEmail = (email) =>
   /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+
+const flatten = (arr, depth = 1) => arr.flat(depth);
