@@ -727,3 +727,7 @@ const isValidEmail = (email) =>
 
 
 const flatten = (arr, depth = 1) => arr.flat(depth);
+
+
+const toCamelCase = (str) =>
+  str.replace(/[-_](.)/g, (_, c) => c.toUpperCase());
