@@ -552,3 +552,7 @@ const toCamelCase = (str) =>
 
 
 const unique = (arr) => [...new Set(arr)];
+
+
+const isValidEmail = (email) =>
+  /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
