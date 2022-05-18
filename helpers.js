@@ -734,3 +734,7 @@ const toCamelCase = (str) =>
 
 
 const flatten = (arr, depth = 1) => arr.flat(depth);
+
+
+const queryParams = (params) =>
+  '?' + new URLSearchParams(params).toString();
