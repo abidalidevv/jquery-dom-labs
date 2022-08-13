@@ -595,3 +595,7 @@ const formatDate = (date, locale = 'en-US', options = {}) =>
     year: 'numeric', month: 'short', day: 'numeric',
     ...options,
   }).format(new Date(date));
+
+
+const omit = (obj, keys) =>
+  Object.fromEntries(Object.entries(obj).filter(([k]) => !keys.includes(k)));
