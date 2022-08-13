@@ -588,3 +588,10 @@ const debounce = (fn, delay) => {
     timer = setTimeout(() => fn(...args), delay);
   };
 };
+
+
+const formatDate = (date, locale = 'en-US', options = {}) =>
+  new Intl.DateTimeFormat(locale, {
+    year: 'numeric', month: 'short', day: 'numeric',
+    ...options,
+  }).format(new Date(date));
