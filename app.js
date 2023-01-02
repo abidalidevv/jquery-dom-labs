@@ -614,3 +614,7 @@ const compose = (...fns) => (value) => fns.reduceRight((v, fn) => fn(v), value);
 
 const pick = (obj, keys) =>
   Object.fromEntries(keys.filter((k) => k in obj).map((k) => [k, obj[k]]));
+
+
+const toKebabCase = (str) =>
+  str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
