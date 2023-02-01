@@ -618,3 +618,7 @@ const pick = (obj, keys) =>
 
 const toKebabCase = (str) =>
   str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
+
+
+const generateId = (length = 8) =>
+  Math.random().toString(36).substring(2, 2 + length);
