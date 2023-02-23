@@ -771,3 +771,7 @@ const throttle = (fn, limit) => {
 
 
 const deepClone = (obj) => JSON.parse(JSON.stringify(obj));
+
+
+const generateId = (length = 8) =>
+  Math.random().toString(36).substring(2, 2 + length);
