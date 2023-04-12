@@ -775,3 +775,12 @@ const deepClone = (obj) => JSON.parse(JSON.stringify(obj));
 
 const generateId = (length = 8) =>
   Math.random().toString(36).substring(2, 2 + length);
+
+
+const setNestedValue = (obj, path, value) => {
+  const keys = path.split('.');
+  const last = keys.pop();
+  const target = keys.reduce((acc, key) => (acc[key] = acc[key] || {}), obj);
+  target[last] = value;
+  return obj;
+};
