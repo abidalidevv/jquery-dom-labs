@@ -622,3 +622,6 @@ const toKebabCase = (str) =>
 
 const generateId = (length = 8) =>
   Math.random().toString(36).substring(2, 2 + length);
+
+
+const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
