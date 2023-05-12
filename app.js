@@ -635,3 +635,13 @@ const formatDate = (date, locale = 'en-US', options = {}) =>
     year: 'numeric', month: 'short', day: 'numeric',
     ...options,
   }).format(new Date(date));
+
+
+const storage = {
+  get: (key, fallback = null) => {
+    try { return JSON.parse(localStorage.getItem(key)) ?? fallback; }
+    catch { return fallback; }
+  },
+  set: (key, value) => localStorage.setItem(key, JSON.stringify(value)),
+  remove: (key) => localStorage.removeItem(key),
+};
