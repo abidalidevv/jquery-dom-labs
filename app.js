@@ -628,3 +628,10 @@ const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
 
 
 const compose = (...fns) => (value) => fns.reduceRight((v, fn) => fn(v), value);
+
+
+const formatDate = (date, locale = 'en-US', options = {}) =>
+  new Intl.DateTimeFormat(locale, {
+    year: 'numeric', month: 'short', day: 'numeric',
+    ...options,
+  }).format(new Date(date));
