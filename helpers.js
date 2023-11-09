@@ -784,3 +784,7 @@ const setNestedValue = (obj, path, value) => {
   target[last] = value;
   return obj;
 };
+
+
+const pick = (obj, keys) =>
+  Object.fromEntries(keys.filter((k) => k in obj).map((k) => [k, obj[k]]));
