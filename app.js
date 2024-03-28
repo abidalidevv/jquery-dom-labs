@@ -670,3 +670,13 @@ const retry = async (fn, attempts = 3, delay = 500) => {
 
 
 const flatten = (arr, depth = 1) => arr.flat(depth);
+
+
+async function fetchJSON(url, options = {}) {
+  const res = await fetch(url, {
+    headers: { 'Content-Type': 'application/json' },
+    ...options,
+  });
+  if (!res.ok) throw new Error(`HTTP ${res.status}: ${res.statusText}`);
+  return res.json();
+}
