@@ -684,3 +684,6 @@ async function fetchJSON(url, options = {}) {
 
 const getNestedValue = (obj, path, fallback = undefined) =>
   path.split('.').reduce((acc, key) => acc?.[key], obj) ?? fallback;
+
+
+const flatten = (arr, depth = 1) => arr.flat(depth);
