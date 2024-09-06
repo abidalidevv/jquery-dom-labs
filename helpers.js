@@ -803,3 +803,6 @@ const memoize = (fn) => {
 
 
 const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
+
+
+const compose = (...fns) => (value) => fns.reduceRight((v, fn) => fn(v), value);
