@@ -687,3 +687,6 @@ const getNestedValue = (obj, path, fallback = undefined) =>
 
 
 const flatten = (arr, depth = 1) => arr.flat(depth);
+
+
+const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
