@@ -702,3 +702,7 @@ const memoize = (fn) => {
     return result;
   };
 };
+
+
+const queryParams = (params) =>
+  '?' + new URLSearchParams(params).toString();
