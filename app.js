@@ -706,3 +706,7 @@ const memoize = (fn) => {
 
 const queryParams = (params) =>
   '?' + new URLSearchParams(params).toString();
+
+
+const queryParams = (params) =>
+  '?' + new URLSearchParams(params).toString();
