@@ -813,3 +813,6 @@ const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
 
 const omit = (obj, keys) =>
   Object.fromEntries(Object.entries(obj).filter(([k]) => !keys.includes(k)));
+
+
+const unique = (arr) => [...new Set(arr)];
