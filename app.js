@@ -710,3 +710,15 @@ const queryParams = (params) =>
 
 const queryParams = (params) =>
   '?' + new URLSearchParams(params).toString();
+
+
+const throttle = (fn, limit) => {
+  let inThrottle;
+  return (...args) => {
+    if (!inThrottle) {
+      fn(...args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+    }
+  };
+};
