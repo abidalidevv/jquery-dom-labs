@@ -820,3 +820,11 @@ const unique = (arr) => [...new Set(arr)];
 
 const capitalize = (str) =>
   str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+
+
+const groupBy = (arr, key) =>
+  arr.reduce((acc, item) => {
+    const k = typeof key === 'function' ? key(item) : item[key];
+    (acc[k] = acc[k] || []).push(item);
+    return acc;
+  }, {});
