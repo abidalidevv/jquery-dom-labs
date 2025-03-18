@@ -726,3 +726,13 @@ const throttle = (fn, limit) => {
 
 const scrollToTop = (smooth = true) =>
   window.scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' });
+
+
+const storage = {
+  get: (key, fallback = null) => {
+    try { return JSON.parse(localStorage.getItem(key)) ?? fallback; }
+    catch { return fallback; }
+  },
+  set: (key, value) => localStorage.setItem(key, JSON.stringify(value)),
+  remove: (key) => localStorage.removeItem(key),
+};
