@@ -835,3 +835,6 @@ const unique = (arr) => [...new Set(arr)];
 
 const queryParams = (params) =>
   '?' + new URLSearchParams(params).toString();
+
+
+const deepClone = (obj) => JSON.parse(JSON.stringify(obj));
