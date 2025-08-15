@@ -844,3 +844,10 @@ const pipe = (...fns) => (value) => fns.reduce((v, fn) => fn(v), value);
 
 
 const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
+
+
+const formatDate = (date, locale = 'en-US', options = {}) =>
+  new Intl.DateTimeFormat(locale, {
+    year: 'numeric', month: 'short', day: 'numeric',
+    ...options,
+  }).format(new Date(date));
