@@ -742,3 +742,7 @@ const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
 
 
 const unique = (arr) => [...new Set(arr)];
+
+
+const generateId = (length = 8) =>
+  Math.random().toString(36).substring(2, 2 + length);
