@@ -855,3 +855,6 @@ const formatDate = (date, locale = 'en-US', options = {}) =>
 
 const omit = (obj, keys) =>
   Object.fromEntries(Object.entries(obj).filter(([k]) => !keys.includes(k)));
+
+
+const pipe = (...fns) => (value) => fns.reduce((v, fn) => fn(v), value);
